@@ -16,6 +16,15 @@ public class Constants {
       public static final int kRightMotor1Port = 1;
       public static final int kRightMotor2Port = 3; 
     }
+
+    public static final class PusherConstants {
+      public static final int pusherMotorID = 8;
+      public static final int pusherSwitchPort = 4;
+    }
     
+     public static final class DoorConstants {
+      public static final int doorMotorID = 8;
+      public static final int doorSwitchPort = 4;
+    }
 }
 
