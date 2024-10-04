@@ -7,9 +7,6 @@ import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkLowLevel.MotorType;
-
 import frc.robot.Constants.DriveConstants;
 
 public class DriveSubsystem extends SubsystemBase {
@@ -24,8 +21,6 @@ public class DriveSubsystem extends SubsystemBase {
     private final TalonFXConfiguration talonConfig = new TalonFXConfiguration();
 
     private boolean isBrakeOn = false;
-
-    public final CANSparkMax wahoo = new CANSparkMax(37, MotorType.kBrushless);
     
     public DriveSubsystem() {
 
