@@ -26,9 +26,9 @@ public class RobotContainer {
   private static RobotContainer m_robotContainer = new RobotContainer();
   public final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
   public final PusherSubsystem m_pusherSubsystem = new PusherSubsystem();
+  public final DoorSubsystem m_doorSubsystem = new DoorSubsystem();
 
   private final XboxController driveController = new XboxController(0);
-
   private final JoystickButton driveStart = new JoystickButton(driveController, XboxController.Button.kStart.value);
 
   /**
@@ -45,6 +45,9 @@ public class RobotContainer {
     setUpDriveTab();
 
     NamedCommands.registerCommand("Pusher Forward", new PusherForward(m_pusherSubsystem));
+    NamedCommands.registerCommand("Door Open", new DoorUp(m_doorSubsystem));
+    NamedCommands.registerCommand("Door Closed", new DoorDown(m_doorSubsystem) );
+    NamedCommands.registerCommand("Pusher Back", new PusherBackward(m_pusherSubsystem));
   }
 
   public static RobotContainer getInstance() {
