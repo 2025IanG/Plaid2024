@@ -24,6 +24,19 @@
               {
                 "type": "named",
                 "data": {
+                  "name": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "race",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
                   "name": "Pusher Forward"
                 }
               },
