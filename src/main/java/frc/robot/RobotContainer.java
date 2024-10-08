@@ -6,6 +6,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
+import com.pathplanner.lib.auto.NamedCommands;
+
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -22,6 +25,7 @@ public class RobotContainer {
 
   private static RobotContainer m_robotContainer = new RobotContainer();
   public final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
+  public final PusherSubsystem m_pusherSubsystem = new PusherSubsystem();
 
   private final XboxController driveController = new XboxController(0);
 
@@ -39,6 +43,8 @@ public class RobotContainer {
     configureButtonBindings();
 
     setUpDriveTab();
+
+    NamedCommands.registerCommand("Pusher Forward", new PusherForward(m_pusherSubsystem));
   }
 
   public static RobotContainer getInstance() {
