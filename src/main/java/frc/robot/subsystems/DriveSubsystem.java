@@ -20,9 +20,6 @@ import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.math.kinematics.DifferentialDriveWheelSpeeds;
 import edu.wpi.first.math.util.Units;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkLowLevel.MotorType;
-
 import frc.robot.Constants.DriveConstants;
 
 public class DriveSubsystem extends SubsystemBase {
@@ -39,8 +36,6 @@ public class DriveSubsystem extends SubsystemBase {
     private final AHRS m_gyro = new AHRS(SPI.Port.kMXP);
 
     private boolean isBrakeOn = false;
-
-    public final CANSparkMax wahoo = new CANSparkMax(37, MotorType.kBrushless);
 
     public final DifferentialDriveOdometry m_odometry;
 
