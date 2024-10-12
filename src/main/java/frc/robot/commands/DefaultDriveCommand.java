@@ -25,8 +25,8 @@ public class DefaultDriveCommand extends Command {
     @Override
     public void execute() {
         m_driveSubsystem.arcadeDrive(
-            MathUtil.applyDeadband(m_controller.getLeftY() * 0.75, 0.1), 
-            MathUtil.applyDeadband(m_controller.getLeftX() * 0.6, 0.1)
+            MathUtil.applyDeadband(m_controller.getLeftY(), 0.1), 
+            MathUtil.applyDeadband(m_controller.getLeftX(), 0.1)
         );
     }
 
