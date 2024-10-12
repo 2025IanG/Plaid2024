@@ -142,8 +142,8 @@ public class RobotContainer {
     driveTab.addBoolean("Is Brake On",
       () -> {
         return m_driveSubsystem.isBrakeOn();
-      }).withSize(1, 1)
-      .withPosition(1, 0)
+      }).withSize(2, 2)
+      .withPosition(0, 1)
       .withWidget(BuiltInWidgets.kBooleanBox);
   }
 

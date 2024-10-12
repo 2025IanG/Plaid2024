@@ -49,7 +49,7 @@ public class DriveSubsystem extends SubsystemBase {
         rightMotor2 = new TalonFX(DriveConstants.kRightMotor2Port);
 
         // Not sure if this works, use Phoenix Tuner if necessary
-        talonConfig.OpenLoopRamps.DutyCycleOpenLoopRampPeriod = 1;
+        talonConfig.OpenLoopRamps.DutyCycleOpenLoopRampPeriod = 0;
 
         leftMotor1.getConfigurator().apply(talonConfig);
         leftMotor2.getConfigurator().apply(talonConfig);
